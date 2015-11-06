@@ -1,5 +1,11 @@
 RewriteEngine on
 
-RewriteRule ^logout$ /index.php?type=index&action=logout
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !\..{1,10}$
+RewriteCond %{REQUEST_URI} !(.*)/$
 
-RewriteRule ^(\w+)(?:\/(\w+)(?:\/(\d+))?)?$ /index.php?type=$1&action=$2&id=$3
+RewriteRule ^404/$ /index.php?type=index&action=404
+RewriteRule ^(logout|login|registration)/$ /index.php?type=index&action=$1 [QSA,L]
+
+RewriteRule ^admin/(\w+)(?:\/(\w+)(?:\/(\d+))?)?\/?$ /index.php?module=admin&type=$1&action=$2&id=$3 [QSA,L]
+RewriteRule ^(\w+)(?:\/(\w+)(?:\/(\d+))?)?\/?$ /index.php?type=$1&action=$2&id=$3 [QSA,L]

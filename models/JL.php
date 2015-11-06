@@ -273,10 +273,18 @@ class JL {
 	}
 
 	public static function AutoLoad($classname) {
-		if ( substr( $classname, 0, 2 ) === 'C_' )
-			$classname = ROOT_PATH . '/core/' . strtolower( $classname );
+		if ( substr( $classname, 0, 2 ) === 'C_' ){
+            $contr = explode('_', $classname);
+
+            if(count($contr) == 3)
+                $classname = ROOT_PATH . '/core/' . strtolower($contr[1]) .'/' .strtolower( $classname );
+            else
+                $classname = ROOT_PATH . '/core/' . strtolower( $classname );
+        }
 		else
 			$classname = MODELS_DIR . '/' . $classname;
+
+
 		require_once $classname . '.php';
 	} // AutoLoad
 

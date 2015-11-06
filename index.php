@@ -23,9 +23,14 @@ spl_autoload_register( 'JL::AutoLoad' );
 global $DB;
 $DB = startup();
 
-
-if( isset( $_GET['type'] ) ){ 
+if( isset( $_GET['type'] ) ){
     $contr = 'C_' . $_GET['type'];
+
+    if(isset($_GET['module']))
+        $contr = 'C_'.$_GET['module'].'_'.$_GET['type'];
+
+
+    echo $contr;
     $controller = new $contr;
 }
 else

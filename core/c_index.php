@@ -21,7 +21,6 @@ class C_Index extends C_Base{
     public function actionIndex(){
         $this->tpl = 'front/index/index';
         $this->title = 'Main Page title';
- 
     }
 
     public function actionLogout(){
