@@ -1,0 +1,208 @@
+/* reset.css */
+html {margin:0;padding:0;border:0;}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure, dialog, footer, header, hgroup, menu, nav, section {display:block;}
+body {line-height:1.5;background:white;}
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;float:none !important;}
+table, th, td {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:'';}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+:focus {outline:0;}
+
+body{
+    background: rgba(249, 249, 249, 0.74);
+}
+
+.clear{clear: both;}
+
+
+/** Шапка **/
+
+#header_top, #header_bot{
+    height: 30px;
+    width: 100%;
+    padding: 15px 0;
+}
+#header_top{
+    background: #0091ca;
+}
+#header_top a{
+    color: white;
+}
+.header_block_right, .header_block_left{
+    float: left;
+}
+
+.header_block_left{
+    width: 750px;
+}
+.header_block_right{
+    width: 235px;
+    vertical-align: top;
+    margin-left: 15px;
+}
+
+.top_menu, .top_social_links, .login_top_button, .wrap_city_select, .profile_menu{
+    vertical-align: middle;
+    font-size: 14px;
+    float: left;
+}
+.city_select{
+    width: 150px;
+}
+.top_menu{
+    margin: 0 15px;
+    padding: 0;
+    margin-top: 5px;
+}
+.top_menu li{
+    margin: 0 5px;
+    list-style: none;
+    display: inline-block;
+}
+.top_social_links{
+    float: right;
+    margin-top: 5px;
+}
+.profile_menu{
+}
+.login_top_button{
+    float: right;
+}
+
+#header_bot{
+
+}
+.header_wrap{
+    margin: 0 auto;
+    width: 1000px;
+}
+.site_logo {
+    display: inline-block;
+}
+
+.site_logo a{
+    display: block;
+    width: 150px;
+    height: 30px;
+    color: #0091ca;
+    font-size: 27px;
+    font-weight: bolder;
+}
+.category_menu{
+    margin-left: 15px;
+    display: inline-block;
+    vertical-align: top;
+}
+.top_search{
+    display: inline-block;
+    float: right;
+}
+.top_search i{
+    color: grey;
+}
+.top_search input{
+    width: 235px;
+    color: grey;
+    font-size: 14px;
+    border-radius: 15px !important;
+}
+
+
+
+
+/** Контент **/
+aside#wrap{
+    width: 1000px;
+    margin: 0 auto;
+}
+.content{
+    width: 100%;
+    padding: 12px;
+}
+
+/** Главная страница **/
+div#map, div#search_bar{
+    font-size: 14px;
+}
+div#map{
+    background: #0091ca;
+    display: inline-block;
+    padding: 1px;
+}
+
+
+.add-point-map{
+    width: 100%;
+    height: 400px;
+}
+.main-page-map{
+    width: 748px;
+    height: 498px;
+}
+
+
+div#search_bar{
+    content: '';
+    margin-left: 11px;
+    width: 233px;
+    height: 500px;
+    display: inline-block;
+    border: 1px solid #0091ca;
+    border-radius: 10px;
+
+}
+
+
+/** Внутренние страницы **/
+.inner_wrap{
+    border: 1px solid #0091ca;
+    border-radius: 3px;
+    min-height: 100px;
+}
+.add-point-all input[type="text"], .add-point-all select {
+    width: 187px;
+}
+
+input.point-find-prop {
+    display: block;
+    margin-left: 71px;
+    margin-top: 5px;
+}
+
+.date-min-row input[type="text"]{
+    width: 158px;
+}
+
+.text-before-date{
+    width: 25px;
+    display: inline-block;
+}
+
+.add-point-form-area{
+    width: 42%;
+    display: inline-block;
+}
+.add-point-map-area{
+    display: inline-block;
+    vertical-align: top;
+    width: 55%;
+}
+
+.point-add-button{
+    float: right;
+    height: 50px;
+    width: 96%;
+    margin-right: 17px !important;
+}
+
+
+div#banner{
+    margin-top: 15px;
+    width: 1000px;
+    height: 150px;
+    background: #0091ca;
+}
+

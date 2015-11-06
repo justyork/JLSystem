@@ -1,0 +1,23 @@
+$(document).ready(function(){
+
+    if($('#ckeditor').val() != null){
+        CKEDITOR.replace( 'ckeditor', {
+            uiColor: '#ffffff',
+            height: 150,
+            width: 400
+        } );
+
+    }
+
+    var user_city_id =  $.cookie('user-city-id');
+    var modal = UIkit.modal("#dialog-pick-city");
+
+    if(!user_city_id){
+        modal.show();
+    }
+
+    $('.city_select').change(function(){
+        $.cookie('user-city-id', $(this).val(), {path:'/'});
+    });
+
+})
